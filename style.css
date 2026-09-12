@@ -2,6 +2,7 @@
    MUHAMMAD SHAYAN — DATA ANALYST PORTFOLIO
    Premium Dark • Blue/Cyan Gradient • Smooth Animation
    ========================================================= */
+
 :root {
     --bg: #07111f;
     --bg2: #0b1626;
@@ -41,7 +42,6 @@ html {
 
 body {
     font-family: "Plus Jakarta Sans", sans-serif;
-
     color: var(--text);
 
     background:
@@ -94,9 +94,7 @@ nav {
     position: fixed;
     top: 0;
     left: 0;
-
     width: 100%;
-
     z-index: 1000;
 
     background: rgba(7, 17, 31, .78);
@@ -187,13 +185,13 @@ nav {
 
 
 /* =========================================================
-   HERO
+   HERO — COMPACT PROFESSIONAL
    ========================================================= */
 
 .hero {
-    min-height: 100vh;
+    min-height: auto;
 
-    padding: 145px 0 90px;
+    padding: 125px 0 75px;
 
     display: flex;
     align-items: center;
@@ -224,11 +222,95 @@ nav {
 .hero-grid {
     display: grid;
 
-    grid-template-columns: 1.2fr .8fr;
+    grid-template-columns: 1.35fr .85fr;
 
-    gap: 70px;
+    gap: 55px;
 
     align-items: center;
+}
+
+
+/* =========================================================
+   IBM BADGE
+   ========================================================= */
+
+.tag {
+    display: inline-flex;
+    align-items: center;
+
+    position: relative;
+
+    padding: 13px 24px 13px 42px;
+
+    color: #38bdf8;
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 2.5px;
+
+    border: 1px solid rgba(56, 189, 248, .35);
+
+    border-radius: 999px;
+
+    background: rgba(8, 20, 35, .45);
+
+    box-shadow:
+        inset 0 0 20px rgba(56, 189, 248, .025);
+
+    margin-bottom: 18px;
+
+    transition:
+        border-color .3s ease,
+        background .3s ease,
+        box-shadow .3s ease,
+        transform .3s ease;
+}
+
+.tag::before {
+    content: "";
+
+    position: absolute;
+
+    left: 20px;
+
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: #38bdf8;
+
+    animation: dotPulse 1.8s ease-in-out infinite;
+}
+
+@keyframes dotPulse {
+
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 4px rgba(56, 189, 248, .4);
+    }
+
+    50% {
+        transform: scale(1.7);
+        box-shadow: 0 0 14px rgba(56, 189, 248, .9);
+    }
+
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 4px rgba(56, 189, 248, .4);
+    }
+}
+
+.tag:hover {
+    transform: translateY(-2px);
+
+    border-color: rgba(56, 189, 248, .6);
+
+    background: rgba(56, 189, 248, .05);
+
+    box-shadow:
+        0 0 25px rgba(56, 189, 248, .08);
 }
 
 
@@ -236,47 +318,18 @@ nav {
    HERO TEXT
    ========================================================= */
 
-.tag {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-
-    color: var(--blue);
-
-    font-size: 11px;
-    font-weight: 800;
-
-    letter-spacing: 2px;
-
-    margin-bottom: 22px;
-}
-
-.tag::before {
-    content: "";
-
-    width: 27px;
-    height: 1px;
-
-    background:
-        linear-gradient(
-            90deg,
-            var(--blue),
-            var(--cyan)
-        );
-}
-
 .hero h1 {
-    font-size: clamp(52px, 7vw, 78px);
+    font-size: clamp(55px, 6.5vw, 75px);
 
-    line-height: 1.01;
+    line-height: 1.02;
 
-    letter-spacing: -4px;
+    letter-spacing: -3px;
 
     font-weight: 800;
 
     color: var(--white);
 
-    margin-bottom: 27px;
+    margin-bottom: 22px;
 }
 
 .hero h1 span {
@@ -299,27 +352,20 @@ nav {
 }
 
 .hero > .container > .hero-grid > div:first-child > p {
-    max-width: 620px;
+    max-width: 570px;
 
     color: var(--muted);
 
-    font-size: 15px;
+    font-size: 13px;
 
-    line-height: 1.9;
+    line-height: 1.75;
 
-    margin-bottom: 30px;
+    margin-bottom: 24px;
 }
-
-
-/* =========================================================
-   HERO BUTTON AREA
-   ========================================================= */
 
 .buttons {
     display: flex;
-
     gap: 12px;
-
     flex-wrap: wrap;
 }
 
@@ -331,9 +377,13 @@ nav {
 .hero-card {
     position: relative;
 
-    min-height: 455px;
+    min-height: 360px;
 
-    padding: 38px;
+    max-width: 560px;
+    width: 100%;
+    margin-left: auto;
+
+    padding: 25px;
 
     display: flex;
     flex-direction: column;
@@ -409,49 +459,69 @@ nav {
     transform: scale(1.25);
 }
 
+
+/* =========================================================
+   MS CIRCLE
+   ========================================================= */
+
 .initials {
     position: relative;
     z-index: 2;
 
-    width: 72px;
-    height: 72px;
+    width: 110px;
+    height: 110px;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    margin-bottom: 25px;
+    margin: 0 auto 25px;
 
-    border-radius: 18px;
+    border-radius: 50%;
 
-    font-size: 22px;
+    color: #38bdf8;
+
+    font-size: 34px;
     font-weight: 800;
 
-    color: #ffffff;
+    background: transparent;
 
-    background:
-        linear-gradient(
-            135deg,
-            rgba(56, 189, 248, .20),
-            rgba(139, 92, 246, .20)
-        );
-
-    border: 1px solid rgba(56, 189, 248, .25);
+    border: 1px solid rgba(56, 189, 248, .45);
 
     box-shadow:
-        inset 0 0 25px rgba(56, 189, 248, .06),
-        0 12px 35px rgba(0, 0, 0, .2);
+        0 0 35px rgba(56, 189, 248, .04);
+
+    transition:
+        transform .4s ease,
+        border-color .4s ease,
+        box-shadow .4s ease;
 }
+
+.initials:hover {
+    transform: scale(1.04);
+
+    border-color: rgba(56, 189, 248, .7);
+
+    box-shadow:
+        0 0 35px rgba(56, 189, 248, .10);
+}
+
+
+/* =========================================================
+   HERO NAME
+   ========================================================= */
 
 .hero-card h3 {
     position: relative;
     z-index: 2;
 
-    font-size: 28px;
-
     color: #ffffff;
 
-    margin-bottom: 7px;
+    font-size: 26px;
+
+    margin-bottom: 5px;
+
+    text-align: center;
 }
 
 .hero-card > p {
@@ -460,10 +530,12 @@ nav {
 
     color: var(--blue);
 
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 700;
 
     letter-spacing: .8px;
+
+    text-align: center;
 }
 
 
@@ -479,13 +551,13 @@ nav {
 
     grid-template-columns: 1fr 1fr;
 
-    gap: 12px;
+    gap: 10px;
 
-    margin-top: 30px;
+    margin-top: 24px;
 }
 
 .stat {
-    padding: 18px;
+    padding: 15px;
 
     background: rgba(255, 255, 255, .025);
 
@@ -507,7 +579,7 @@ nav {
 .stat strong {
     display: block;
 
-    font-size: 21px;
+    font-size: 19px;
 
     margin-bottom: 3px;
 
@@ -526,7 +598,7 @@ nav {
 .stat small {
     color: var(--muted);
 
-    font-size: 10px;
+    font-size: 9px;
     font-weight: 600;
 }
 
@@ -654,7 +726,7 @@ section {
 
 
 /* =========================================================
-   EDUCATION / CERTIFICATE
+   EDUCATION / CERTIFICATION
    ========================================================= */
 
 .education-item {
@@ -667,6 +739,8 @@ section {
     justify-content: space-between;
 
     gap: 15px;
+
+    margin-top: -15px;
 
     padding: 12px 0;
 
@@ -715,56 +789,61 @@ section {
 
 
 /* =========================================================
-   SKILLS
+   SKILLS — COMPACT 2 ROW PILL STYLE
    ========================================================= */
 
 .skills {
     display: grid;
 
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(7, 1fr);
 
-    gap: 10px;
+    gap: 14px 12px;
+
+    width: 100%;
 }
 
-.skill {
-    padding: 15px 17px;
+.skills span {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 48px;
+
+    padding: 8px 12px;
 
     color: var(--text);
 
     font-size: 12px;
     font-weight: 600;
 
-    background: rgba(255, 255, 255, .025);
+    background: rgba(8, 20, 35, .55);
 
-    border: 1px solid rgba(148, 163, 184, .10);
+    border: 1px solid rgba(56, 189, 248, .22);
 
-    border-radius: 10px;
+    border-radius: 999px;
 
-    transition: .3s var(--ease);
+    text-align: center;
+
+    transition:
+        transform .3s var(--ease),
+        color .3s ease,
+        border-color .3s ease,
+        background .3s ease,
+        box-shadow .3s ease;
 }
 
-.skill::before {
-    content: "•";
-
-    color: var(--blue);
-
-    margin-right: 8px;
-
-    transition: .3s ease;
-}
-
-.skill:hover {
+.skills span:hover {
     color: #ffffff;
 
-    transform: translateX(5px);
+    transform: translateY(-4px);
 
-    border-color: rgba(56, 189, 248, .25);
+    border-color: rgba(56, 189, 248, .60);
 
-    background: rgba(56, 189, 248, .045);
-}
+    background: rgba(56, 189, 248, .06);
 
-.skill:hover::before {
-    color: var(--cyan);
+    box-shadow:
+        0 8px 22px rgba(56, 189, 248, .08);
 }
 
 
@@ -774,14 +853,19 @@ section {
 
 .projects {
     display: grid;
+
     grid-template-columns: 1fr 1fr;
+
     gap: 20px;
+
     align-items: stretch;
 }
 
 .project {
     position: relative;
+
     padding: 32px;
+
     display: flex;
     flex-direction: column;
 
@@ -793,13 +877,17 @@ section {
         );
 
     border: 1px solid var(--border);
+
     border-radius: var(--radius);
+
     overflow: hidden;
+
     transition: .4s var(--ease);
 }
 
 .project:hover {
     transform: translateY(-7px);
+
     border-color: rgba(56, 189, 248, .30);
 
     box-shadow:
@@ -811,9 +899,12 @@ section {
     z-index: 2;
 
     color: var(--blue);
+
     font-size: 10px;
     font-weight: 800;
+
     letter-spacing: 1.8px;
+
     margin-bottom: 15px;
 }
 
@@ -822,8 +913,11 @@ section {
     z-index: 2;
 
     color: #ffffff;
+
     font-size: 21px;
+
     line-height: 1.3;
+
     margin-bottom: 12px;
 }
 
@@ -832,8 +926,11 @@ section {
     z-index: 2;
 
     color: var(--muted);
+
     font-size: 13px;
+
     line-height: 1.8;
+
     margin-bottom: 18px;
 }
 
@@ -842,13 +939,17 @@ section {
     z-index: 2;
 
     padding-left: 18px;
+
     flex-grow: 1;
 }
 
 .project li {
     color: #9eacbd;
+
     font-size: 12px;
+
     line-height: 1.8;
+
     margin-bottom: 8px;
 }
 
@@ -866,6 +967,7 @@ section {
     z-index: 3;
 
     display: flex;
+
     justify-content: flex-end;
 
     margin-top: 25px;
@@ -885,6 +987,7 @@ section {
     font-weight: 700;
 
     border: 1px solid rgba(56, 189, 248, .22);
+
     border-radius: 9px;
 
     background: rgba(56, 189, 248, .035);
@@ -896,6 +999,7 @@ section {
     color: #ffffff;
 
     border-color: var(--blue);
+
     background: rgba(56, 189, 248, .10);
 
     transform: translateY(-3px);
@@ -906,31 +1010,117 @@ section {
 
 
 /* =========================================================
-   RESPONSIVE
+   WORKFLOW
    ========================================================= */
 
-@media (max-width: 900px) {
+.workflow {
+    display: grid;
 
-    .projects {
-        grid-template-columns: 1fr;
-    }
+    grid-template-columns: repeat(4, 1fr);
 
+    gap: 18px;
+
+    margin-top: 35px;
 }
 
-@media (max-width: 600px) {
+.workflow > div {
+    position: relative;
 
-    .project {
-        padding: 25px;
-    }
+    padding: 28px;
 
+    min-height: 190px;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    border-radius: 16px;
+
+    background: rgba(255, 255, 255, 0.03);
+
+    overflow: hidden;
+
+    transition:
+        transform .35s var(--ease),
+        border-color .35s ease,
+        background .35s ease,
+        box-shadow .35s ease;
 }
+
+.workflow > div::before {
+    content: "";
+
+    position: absolute;
+
+    width: 120px;
+    height: 120px;
+
+    top: -70px;
+    right: -60px;
+
+    border-radius: 50%;
+
+    background: rgba(56, 189, 248, .08);
+
+    filter: blur(25px);
+
+    transition: .4s ease;
+}
+
+.workflow > div:hover {
+    transform: translateY(-8px);
+
+    border-color: rgba(56, 189, 248, 0.5);
+
+    background: rgba(56, 189, 248, 0.045);
+
+    box-shadow:
+        0 18px 45px rgba(0, 0, 0, .25),
+        0 0 25px rgba(56, 189, 248, .06);
+}
+
+.workflow > div:hover::before {
+    transform: scale(1.4);
+}
+
+.workflow b {
+    position: relative;
+    z-index: 2;
+
+    color: var(--blue);
+
+    font-size: 14px;
+
+    letter-spacing: 1px;
+}
+
+.workflow h3 {
+    position: relative;
+    z-index: 2;
+
+    color: #ffffff;
+
+    font-size: 20px;
+
+    margin: 12px 0 8px;
+}
+
+.workflow p {
+    position: relative;
+    z-index: 2;
+
+    color: #8fa0b3;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
 
 /* =========================================================
    CONTACT
    ========================================================= */
 
 .contact-wrapper {
-    max-width: 850px;
+    max-width: 650px;
 
     margin: auto;
 }
@@ -1096,16 +1286,30 @@ section {
    RESPONSIVE — TABLET
    ========================================================= */
 
+@media (max-width: 1000px) {
+
+    .skills {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+
 @media (max-width: 900px) {
+
+    .hero {
+        padding: 110px 0 65px;
+    }
 
     .hero-grid {
         grid-template-columns: 1fr;
 
-        gap: 45px;
+        gap: 40px;
     }
 
     .hero-card {
-        max-width: 650px;
+        max-width: 500px;
+
+        width: 100%;
 
         margin: auto;
     }
@@ -1113,6 +1317,10 @@ section {
     .about-grid,
     .projects {
         grid-template-columns: 1fr;
+    }
+
+    .workflow {
+        grid-template-columns: 1fr 1fr;
     }
 }
 
@@ -1140,35 +1348,46 @@ section {
     }
 
     .hero {
-        padding: 115px 0 70px;
+        padding: 100px 0 55px;
     }
 
     .hero h1 {
-        font-size: 47px;
+        font-size: 40px;
 
-        letter-spacing: -2.5px;
+        letter-spacing: -2px;
     }
 
     .hero-card {
-        min-height: 410px;
+        min-height: 350px;
 
-        padding: 27px;
+        padding: 20px;
     }
 
-    .stats {
-        gap: 9px;
+    .initials {
+        width: 95px;
+        height: 95px;
+
+        font-size: 30px;
+
+        margin-bottom: 22px;
     }
 
-    .stat {
-        padding: 15px;
-    }
-
-    section {
-        padding: 80px 0;
+    .hero-card h3 {
+        font-size: 25px;
     }
 
     .skills {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 10px;
+    }
+
+    .skills span {
+        min-height: 44px;
+
+        padding: 7px 10px;
+
+        font-size: 11px;
     }
 
     .card,
@@ -1186,6 +1405,17 @@ section {
         padding: 30px 20px;
     }
 
+    .workflow {
+        grid-template-columns: 1fr;
+    }
+
+    .workflow > div {
+        min-height: auto;
+    }
+
+    section {
+        padding: 80px 0;
+    }
 }
 
 
@@ -1205,5 +1435,4 @@ section {
 
         scroll-behavior: auto !important;
     }
-
 }
